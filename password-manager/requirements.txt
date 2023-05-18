@@ -1,0 +1,4 @@
+pyperclip
+flask
+python3-flask
+sqlite3
