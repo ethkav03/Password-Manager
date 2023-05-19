@@ -2,3 +2,4 @@ pyperclip
 flask
 python3-flask
 sqlite3
+flask_session

@@ -1,4 +1,5 @@
 1. configure sql database to create new users
 2. create table for passwords
 3. configure sql database to create new accounts and store hashed generated password
-4. allow users to search up account and copy email/username/password to clipboard
+4. GUI users login/register
+5. GUI allow users to search up account and copy email/username/password to clipboard
