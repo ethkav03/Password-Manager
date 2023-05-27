@@ -7,7 +7,7 @@
 {% block main %}
     <h1>Register</h1>
     <br>
-    <form action="/register" method="post">
+    <form action="/register" method="POST">
         <div class="mb-3">
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="email" name="email" placeholder="Email" type="email">
         </div>
@@ -18,5 +18,8 @@
             <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Enter password again" type="password">
         </div>
         <button class="btn btn-primary" type="submit">Register</button>
+        {% if msg != "" %}
+            <p>{{ msg }}</p>
+        {% endif %}
     </form>
 {% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Account
+{% endblock %}
+
+{% block main %}
+    <h1>Add Account</h1>
+    <br>
+    <form action="/addaccount" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="website" name="website" placeholder="Website name..." type="text">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="Username" name="username" placeholder="Username..." type="text">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="email" name="email" placeholder="Email..." type="email">
+        </div>
+        <button class="btn btn-primary" type="submit">Add Account</button>
+        {% if msg != "" %}
+            <p>{{ msg }}</p>
+        {% endif %}
+    </form>
+{% endblock %}
