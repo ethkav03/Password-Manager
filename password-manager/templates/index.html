@@ -6,6 +6,16 @@
 
 {% block main %}
     <div>
+        <script>
+            function myFunction(id) {
+              var x = document.getElementById(id);
+              if (x.style.display === "none") {
+                x.style.display = "block";
+              } else {
+                x.style.display = "none";
+              }
+            }
+        </script>
         <h1>Password Manager</h1>
         <p>Tool for managing your passwords.</p>
         <a href="/addaccount" class="btn btn-primary" style="margin-bottom: 15px;">Add Account +</a>
@@ -16,7 +26,11 @@
                         <h5 class="card-title">{{ p[2] }}</h5>
                         <p class="card-text">Username: {{ p[3] }}</p>
                         <p class="card-text">Email: {{ p[4] }}</p>
-                        <p class="card-text">Password: {{ p[5] }}</p>
+                        <div style="display: grid; grid-template-columns: auto auto;">
+                            <p class="card-text">Password: </p>
+                            <p style="display: none" id="{{p[0]}}">{{ p[5] }}</p>
+                        </div>
+                        <button class="btn btn-dark" onclick="myFunction({{p[0]}})">Show Password</button>
                     </div>
                 </div>
             {% endfor %}

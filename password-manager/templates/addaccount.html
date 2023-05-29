@@ -17,7 +17,10 @@
         <div class="mb-3">
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="email" name="email" placeholder="Email..." type="email">
         </div>
-        <button class="btn btn-primary" type="submit">Add Account</button>
+        <div style="display: flex; gap: 10px; justify-content: center;">
+            <a href="/passwords" class="btn btn-secondary">Back</a>
+            <button class="btn btn-primary" type="submit">Add Account</button>
+        </div>
         {% if msg != "" %}
             <p>{{ msg }}</p>
         {% endif %}
