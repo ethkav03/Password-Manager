@@ -164,8 +164,8 @@ def add():
         if website == "":
             return render_template('addaccount.html', msg="Invalid website")
         
-        accounts = cur.execute(f"SELECT * FROM users WHERE email = '{email}', username = '{username}', website = '{website}'").fetchall()
-        if len(accounts > 0):
+        accounts = cur.execute(f"SELECT * FROM passwords WHERE email = '{email}' AND username = '{username}' AND url = '{website}'").fetchall()
+        if len(accounts) > 0:
             return render_template('addaccount.html', msg="This account already exists.")
 
         pwd = generate()

@@ -1,1 +1,0 @@
-1. GUI allow users to search up account and copy email/username/password to clipboard
